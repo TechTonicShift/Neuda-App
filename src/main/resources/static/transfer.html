@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Funds</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Banking System</a>
+    </nav>
+    <div class="container">
+        <h1 class="mt-4">Transfer Funds</h1>
+        <form id="transferForm"> <!-- Corrected form ID -->
+            <div class="form-group">
+                <label for="fromAccount">From Account Number</label>
+                <input type="text" class="form-control" id="fromAccount" name="fromAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="toAccount">To Account Number</label>
+                <input type="text" class="form-control" id="toAccount" name="toAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="transferAmount">Amount</label>
+                <input type="text" class="form-control" id="transferAmount" name="amount" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Transfer</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

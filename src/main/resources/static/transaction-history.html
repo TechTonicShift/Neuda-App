@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Transaction History</h1>
+        <form id="transactionHistoryForm">
+            <div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" class="form-control" id="accountNumber" name="accountNumber" required>
+            </div>
+            <button type="submit" class="btn btn-dark">Get Transaction History</button>
+        </form>
+        <div id="transactionHistoryResult" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // JavaScript for handling form submission
+        document.getElementById('transactionHistoryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch(`/api/accounts/transactions/${formData.get('accountNumber')}`)
+            .then(response => response.json())
+            .then(data => {
+                let transactionHtml = '<h4>Transaction History:</h4><ul>';
+                data.forEach(transaction => {
+                    transactionHtml += `<li>Type: ${transaction.type}, Amount: ${transaction.amount}, Timestamp: ${transaction.timestamp}</li>`;
+                });
+                transactionHtml += '</ul>';
+                document.getElementById('transactionHistoryResult').innerHTML = transactionHtml;
+            })
+            .catch(error => {
+                alert('Error fetching transaction history');
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

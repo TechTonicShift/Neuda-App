@@ -6,25 +6,68 @@
     <title>Check Balance</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #a6a6a6; /* Grey background */
+        }
+        .container {
+            background-color: #ffffff; /* White container background */
+            padding: 30px; /* Padding for content */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            margin-top: 50px; /* Top margin for container */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Bottom margin for form groups */
+        }
+        .form-group label {
+            font-weight: bold; /* Bold label text */
+        }
+        h1 {
+            text-align: center; /* Center align heading */
+            color: #333; /* Dark text color */
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            font-weight: bold; /* Bold font weight */
+            margin-bottom: 30px; /* Bottom margin for heading */
+            font-size: 2.5rem; /* Larger font size */
+        }
+        form {
+            display: flex; /* Flex layout for form alignment */
+            flex-direction: column; /* Stack form elements vertically */
+            align-items: center; /* Center align form elements */
+        }
+        .form-image {
+            max-width: 350px; /* Adjust max-width of image */
+            margin-right: 20px; /* Margin for spacing between image and form */
+            align-self: flex-start; /* Align image to the left */
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Check Account Balance</h1>
-        <form id="checkBalanceForm">
-            <div class="form-group">
-                <label for="accountNumber">Account Number:</label>
-                <input type="text" class="form-control" id="accountNumber" name="accountNumber" required>
-            </div>
-            <button type="submit" class="btn btn-info">Check Balance</button>
-        </form>
-        <div id="balanceResult" class="mt-4"></div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <img src="./images/balance.JPG" alt="Check Balance Image" class="img-fluid form-image">
+        </div>
+        <div class="col-md-6">
+            <h1>Check Account Balance</h1>
+            <form id="checkBalanceForm">
+                <div class="form-group">
+                    <label for="accountNumber">Account Number:</label>
+                    <input type="text" class="form-control" id="accountNumber" name="accountNumber" required>
+                </div>
+                <button type="submit" class="btn btn-info">Check Balance</button>
+            </form>
+            <div id="balanceResult" class="mt-4"></div>
+        </div>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         // Check Balance Form Submission
         document.getElementById('checkBalanceForm')?.addEventListener('submit', function(event) {
@@ -49,6 +92,6 @@
                 });
         });
     });
-    </script>
+</script>
 </body>
 </html>

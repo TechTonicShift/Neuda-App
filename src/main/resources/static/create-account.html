@@ -6,31 +6,86 @@
     <title>Create Account</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #a6a6a6; /* Grey background */
+        }
+        .container {
+            background-color: #ffffff; /* White container background */
+            padding: 30px; /* Padding for content */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            margin-top: 50px; /* Top margin for container */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Bottom margin for form groups */
+        }
+        .form-group label {
+            font-weight: bold; /* Bold label text */
+        }
+        h1 {
+            text-align: center; /* Center align heading */
+            color: #333; /* Dark text color */
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            font-weight: bold; /* Bold font weight */
+            margin-bottom: 30px; /* Bottom margin for heading */
+            font-size: 2.5rem; /* Larger font size */
+        }
+        h2 {
+            text-align: center; /* Center align tagline */
+            color: #666; /* Dark grey text color */
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            font-size: 1.5rem; /* Font size for tagline */
+            margin-bottom: 20px; /* Bottom margin for tagline */
+        }
+        form {
+            display: flex; /* Flex layout for form alignment */
+            flex-direction: column; /* Stack form elements vertically */
+            align-items: center; /* Center align form elements */
+        }
+        form img {
+            max-width: 250px; /* Adjust max-width of image */
+            margin-bottom: 20px; /* Bottom margin for image */
+        }
+        .image-column {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Create New Account</h1>
-        <form id="createAccountForm">
-            <div class="form-group">
-                <label for="accountNumber">Account Number:</label>
-                <input type="text" class="form-control" id="accountNumber" name="accountNumber" required>
-            </div>
-            <div class="form-group">
-                <label for="accountHolderName">Account Holder Name:</label>
-                <input type="text" class="form-control" id="accountHolderName" name="accountHolderName" required>
-            </div>
-            <div class="form-group">
-                <label for="balance">Initial Balance:</label>
-                <input type="text" class="form-control" id="balance" name="balance" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Create Account</button>
-        </form>
-    </div>
+<div class="container">
+    <h1>Create New Account</h1>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    
+    <div class="row">
+        <div class="col-md-6">
+            <form id="createAccountForm">
+                <div class="form-group">
+                    <label for="accountNumber">Account Number:</label>
+                    <input type="text" class="form-control" id="accountNumber" name="accountNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="accountHolderName">Account Holder Name:</label>
+                    <input type="text" class="form-control" id="accountHolderName" name="accountHolderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="balance">Initial Balance:</label>
+                    <input type="text" class="form-control" id="balance" name="balance" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+        </div>
+        <div class="col-md-6 image-column">
+            <img src="./images/user.png" alt="Image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

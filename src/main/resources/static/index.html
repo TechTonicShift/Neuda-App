@@ -7,39 +7,131 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Link Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #a6a6a6; /* Light grey background for body */
+        }
+        .heading {
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            font-weight: 700; /* Bold font weight */
+            color: #333; /* Dark grey text color */
+            margin-bottom: 20px; /* Spacing below heading */
+        }
+        .tagline {
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            font-weight: 400; /* Normal font weight */
+            color: #666; /* Medium grey text color */
+            font-size: 18px; /* Font size for tagline */
+        }
+        .card-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .container {
+            background-color: #ffffff; /* White background for container */
+            padding: 20px; /* Optional: Add padding for spacing */
+        }
+        .card {
+            background-color: #dcdcdc; /* Grey background for cards */
+            border: 3px solid #ccc; /* Border style */
+            border-radius: 10px; /* Optional: Rounded corners */
+             box-shadow: none; /* Remove any existing shadow */
+            height: 100%;
+}
+
+        .card-img-top {
+            height: auto; /* Auto height to maintain aspect ratio */
+            max-height: 200px; /* Maximum height for consistency */
+            object-fit: contain; /* Fit entire image within container */
+            background-color: #ffffff; /* White background for images */
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Welcome to Banking System</h1>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <a href="create-account.html" class="btn btn-primary btn-lg btn-block">Create Account</a>
-            </div>
-            <div class="col-md-6">
-                <a href="check-balance.html" class="btn btn-info btn-lg btn-block">Check Balance</a>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <a href="deposit.html" class="btn btn-success btn-lg btn-block">Deposit</a>
-            </div>
-            <div class="col-md-6">
-                <a href="withdraw.html" class="btn btn-warning btn-lg btn-block">Withdraw</a>
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="heading">Welcome to BankPal !</h1>
+        <p class="tagline">Banking made simple and secure.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/user.png" class="card-img-top" alt="Create Account">
+                <div class="card-body">
+                    <h5 class="card-title">Create Account</h5>
+                    <p class="card-text">Open a new account with us and start enjoying our services.</p>
+                    <a href="create-account.html" class="btn btn-primary">Create Account</a>
+                </div>
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <a href="transfer.html" class="btn btn-secondary btn-lg btn-block">Transfer Funds</a>
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/balance.JPG" class="card-img-top" alt="Check Balance">
+                <div class="card-body">
+                    <h5 class="card-title">Check Balance</h5>
+                    <p class="card-text">Easily check your account balance.</p>
+                    <a href="check-balance.html" class="btn btn-info">Check Balance</a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <a href="transaction-history.html" class="btn btn-dark btn-lg btn-block">Transaction History</a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/deposit.JPG" class="card-img-top" alt="Deposit">
+                <div class="card-body">
+                    <h5 class="card-title">Deposit</h5>
+                    <p class="card-text">Deposit money into your account quickly and securely.</p>
+                    <a href="deposit.html" class="btn btn-success">Deposit</a>
+                </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/withdraw.JPG" class="card-img-top" alt="Withdraw">
+                <div class="card-body">
+                    <h5 class="card-title">Withdraw</h5>
+                    <p class="card-text">Withdraw money from your account with ease.</p>
+                    <a href="withdraw.html" class="btn btn-warning">Withdraw</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/transfer.JPG" class="card-img-top" alt="Transfer Funds">
+                <div class="card-body">
+                    <h5 class="card-title">Transfer Funds</h5>
+                    <p class="card-text">Transfer funds to other accounts quickly and safely.</p>
+                    <a href="transfer.html" class="btn btn-secondary">Transfer Funds</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+                <img src="./images/transaction.JPG" class="card-img-top" alt="Transaction History">
+                <div class="card-body">
+                    <h5 class="card-title">Transaction History</h5>
+                    <p class="card-text">View the history of all your transactions.</p>
+                    <a href="transaction-history.html" class="btn btn-dark">Transaction History</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Link Bootstrap JS and any additional scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Link Bootstrap JS and any additional scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
